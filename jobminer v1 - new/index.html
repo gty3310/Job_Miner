@@ -119,10 +119,10 @@
     <BODY>
     <FORM NAME="myform">
     
-    <TEXTAREA NAME="myarea" class="form-control" ROWS="30">
+    <TEXTAREA NAME="myarea" class="form-control" id ="textid" style = "max-width: 1020px" ROWS="30">
 
     </TEXTAREA>
-    <INPUT class="btn btn-primary btn-lg" TYPE="button" NAME="button3" Value="Evaluate" 
+    <INPUT class="btn btn-primary btn-lg" id = "btnid" TYPE="button" NAME="button3" Value="Evaluate" 
         onClick="seeTextArea(this.form)">
     </FORM>
 
@@ -156,6 +156,15 @@
     allowAdditions: true
     });
   </script>
+  
+  <script>
+  $("#textid").keydown(function(event){
+    if(event.keyCode == 13){
+        $("#btnid").click();
+    }
+	});
+  </script>
+  
   </body>
 </html>
 
